@@ -5,7 +5,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
+  NavbarItem,
   NavLink,
   UncontrolledDropdown,
   DropdownToggle,
@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import Search from "./search"
 
-const Navbar = (props) => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -37,7 +37,7 @@ const Navbar = (props) => {
   );
 }
 
-export default Navbar;
+export default NavBar;
 
 
 //  if anything , bring in search here

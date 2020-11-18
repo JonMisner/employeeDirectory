@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import Navbar from "../comps/nav";
+import NavBar from "../comps/nav";
 import Body from "../comps/body";
 import { Jumbotron, Container } from 'reactstrap';
 
@@ -13,7 +13,7 @@ function Page () {
    return (
       <Router>
         <div>
-         <Navbar />
+         <NavBar />
          <Jumbotron fluid>
             <Container fluid>
                <Body/>

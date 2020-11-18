@@ -1,6 +1,6 @@
 import React, {Componenet} from "react";
 import DataTable from "./dataTable";
-import Navbar from "./nav";
+import NavBar from "./nav";
 import API from "../utils/api";
 import { render } from "react-dom";
 
