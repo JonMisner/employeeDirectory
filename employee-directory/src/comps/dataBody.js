@@ -11,7 +11,7 @@ export default function DataBody ({users}) {
       const formattedDate = [month,day,year].join("-");
       return formattedDate;
    }
-
+// main part of the page with the employee info
    return (
       <div>
          {users[0] !==undefined && users[0].name !==undefined ? (
@@ -21,27 +21,28 @@ export default function DataBody ({users}) {
                      <td data-th="Image" className="align-middle">
                         <img
                            src={picture.medium}
-                           alt={`profile inmage for ${name.first} ${name.last}`}
+                           alt={"profile image for" + name.first + name.last}
                            className="img-responsive" />
                      </td>
-                     <td data-th="Name" className="name-call align-middle">
+                     <td data-th="Name" className="name-cell align-middle">
                         {name.first} {name.last}
                      </td>
                      <td data-th="Phone" className="align-middle">
                         {phone}
                      </td>
                      <td data-th="Email" className="align-middle">
-                        <a href={"mailto:" +email}>
+                        <a href={"mailto: " +email}>
                            {email}
                         </a>
                      </td>
-                     <td data-th="DOB" className="slign-middle">
+                     <td data-th="DOB" className="align-middle">
                         {formatDate(dob.date)}
                      </td>
                   </tr>
                );
             })
          ) : (
+            
             <div></div>
          )}
       </div>

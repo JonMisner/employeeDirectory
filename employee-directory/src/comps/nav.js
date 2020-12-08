@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import Search from "./search";
 // import Body from "./body";
+import "../styles/nav.css"
 
 const NavBar = ({handleSearchChange}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +17,8 @@ const NavBar = ({handleSearchChange}) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar color="light" light expand="md">
+    <div >
+      <Navbar className="nav" expand="md" >
         <NavbarBrand href="/">Employee Directory</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -34,5 +35,3 @@ const NavBar = ({handleSearchChange}) => {
 
 export default NavBar;
 
-
-//  if anything , bring in search here

@@ -11,7 +11,7 @@ export default function Table ({ headings, users, handleSort}) {
                <tr>
                   {headings.map(({name, width}) => {
                      return (
-                        <row
+                        <th
                            className="col"
                            key={name}
                            style={{width}}
@@ -20,7 +20,7 @@ export default function Table ({ headings, users, handleSort}) {
                            }}>
                            {name}
                            <span className="pointer"></span> 
-                        </row>
+                        </th>
                      );
                   })}
                </tr>

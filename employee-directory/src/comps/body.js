@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import Table from "./table";
 import NavBar from "./nav";
 import API from "../utils/api";
-import { render } from "react-dom";
-import { Navbar } from "reactstrap";
+// import { render } from "react-dom";
+// import { Navbar } from "reactstrap";
 
 export default class DataArea extends Component {
    state = {
@@ -15,8 +15,8 @@ export default class DataArea extends Component {
     headings = [
        { name: "Image", width: "10%" },
        { name: "Name", width: "10%" },
-       { name: "Phone", width: "10%" },
-       { name: "Email", width: "10%" },
+       { name: "Phone", width: "20%" },
+       { name: "Email", width: "20%" },
        { name: "DOB", width: "10%" }
    ]
 
@@ -41,7 +41,7 @@ export default class DataArea extends Component {
                }
                //numerically
                else if (heading === "name") {
-                   return b[heading].first.localeCompare(a[heading].first);
+                   return a[heading].first.localeCompare(b[heading].first);
                } else {
                    return a[heading] - b[heading];
                }
@@ -54,7 +54,7 @@ export default class DataArea extends Component {
                    }
                    //numerically
                    else if (heading === "name") {
-                       return a[heading].first.localeCompare(b[heading].first);
+                       return b[heading].first.localeCompare(a[heading].first);
                    } else {
                        return b[heading] - a[heading];
                    }
@@ -97,7 +97,7 @@ render() {
                    users={this.state.filteredUsers}
                    handleSort={this.handleSort}
                />
-
+           
            </div>
        </>
    );

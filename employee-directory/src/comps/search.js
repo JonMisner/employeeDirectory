@@ -7,7 +7,7 @@ function Search ({handleSearchChange}) {
    return (
       <Form>
          <FormGroup>
-         <Label for="exampleSearch">Search</Label>
+         <Label for="exampleSearch"></Label>
          <Input
             type="search"
             name="search"
