@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function DataBody ({users}) {
+export default function DataBody ({users}) {
    function formatDate(date) {
       const dateArray = date.split("-");
       const year = dateArray[0];
@@ -13,11 +13,11 @@ function DataBody ({users}) {
    }
 
    return (
-      <tbody>
+      <div>
          {users[0] !==undefined && users[0].name !==undefined ? (
             users.map(({login,name,picture,phone,email,dob}) => {
                return (
-                  <tr key={ligin.uuid}>
+                  <tr key={login.uuid}>
                      <td data-th="Image" className="align-middle">
                         <img
                            src={picture.medium}
@@ -31,7 +31,7 @@ function DataBody ({users}) {
                         {phone}
                      </td>
                      <td data-th="Email" className="align-middle">
-                        <a href={"mailto:" +email} target="_blank">
+                        <a href={"mailto:" +email}>
                            {email}
                         </a>
                      </td>
@@ -44,8 +44,6 @@ function DataBody ({users}) {
          ) : (
             <div></div>
          )}
-      </tbody>
+      </div>
    );
 }
-
-export default DataBody;

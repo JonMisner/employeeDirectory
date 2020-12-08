@@ -1,3 +1,10 @@
+import React from "react";
 
-
-// pic, name, salary, birth date
+export default function Header() {
+   return (
+      <header>
+         <h2>Header Here</h2>
+         <h6>Filters</h6>
+      </header>
+   )
+}

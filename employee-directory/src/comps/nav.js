@@ -5,17 +5,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavbarItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavItem,
 } from 'reactstrap';
-import Search from "./search"
+import Search from "./search";
+// import Body from "./body";
 
-const NavBar = (props) => {
+const NavBar = ({handleSearchChange}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -28,9 +23,9 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
           </Nav>
-          <NavbarItem>
-            <Search/>
-          </NavbarItem>
+          <NavItem>
+            <Search handleSearchChange = {handleSearchChange} />
+          </NavItem>
         </Collapse>
       </Navbar>
     </div>

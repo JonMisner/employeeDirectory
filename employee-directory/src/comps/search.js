@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 // search form/button

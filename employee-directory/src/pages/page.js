@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import API from "../utils/API";
-import NavBar from "../comps/nav";
+import React from "react";
+// import API from "../utils/API";
+// import NavBar from "../comps/nav";
 import Body from "../comps/body";
 import { Jumbotron, Container } from 'reactstrap';
 
@@ -8,19 +8,16 @@ import { Jumbotron, Container } from 'reactstrap';
 function Page () {
    
    
-   
-   
    return (
-      <Router>
+      // <Router>
         <div>
-         <NavBar />
          <Jumbotron fluid>
             <Container fluid>
                <Body/>
             </Container>
          </Jumbotron>
         </div>
-      </Router>
+      // </Router>
     );
 
 }

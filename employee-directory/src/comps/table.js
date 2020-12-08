@@ -1,7 +1,7 @@
 import  React from "react";
 import DataBody from "./dataBody";
 
-function Table ({ headings, users, handleSort}) {
+export default function Table ({ headings, users, handleSort}) {
    return (
       <div className="datatable mt-5">
          <table
@@ -11,7 +11,7 @@ function Table ({ headings, users, handleSort}) {
                <tr>
                   {headings.map(({name, width}) => {
                      return (
-                        <th
+                        <row
                            className="col"
                            key={name}
                            style={{width}}
@@ -20,7 +20,7 @@ function Table ({ headings, users, handleSort}) {
                            }}>
                            {name}
                            <span className="pointer"></span> 
-                        </th>
+                        </row>
                      );
                   })}
                </tr>
@@ -30,5 +30,3 @@ function Table ({ headings, users, handleSort}) {
       </div>
    );
 }
-
-export default Table;
