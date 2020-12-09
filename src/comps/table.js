@@ -8,7 +8,7 @@ export default function Table({ headings, users, handleSort }) {
         id="table"
         className="tabnle table-Striped table-hover table-condensed"
       >
-        <thread>
+        <thead>
           <tr>
             {headings.map(({ name, width }) => {
               return (
@@ -16,7 +16,7 @@ export default function Table({ headings, users, handleSort }) {
                   className="col"
                   key={name}
                   style={{ width }}
-                  onCLick={() => {
+                  onClick={() => {
                     handleSort(name.toLowerCase());
                   }}
                 >
@@ -26,7 +26,7 @@ export default function Table({ headings, users, handleSort }) {
               );
             })}
           </tr>
-        </thread>
+        </thead>
         <DataBody users={users} />
       </table>
     </div>
