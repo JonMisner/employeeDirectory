@@ -1,29 +1,41 @@
 {
-  "name": "employeeDirectory",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "lite-server": "lite-server",
-    "build": "cd employee-directory && react-scripts build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
-  },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+  "name": "employee-directory",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "lite-server": "^2.5.3",
-    "mongoose": "^5.5.15",
-    "morgan": "^1.9.1"
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.2",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0",
+    "reactstrap": "^8.7.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
